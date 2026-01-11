@@ -61,7 +61,8 @@ async function sendToTelegram(filePath, caption) {
     // Step 3: 截图登录后的页面
     const loginScreenshot = "login-success.png";
     await page.screenshot({ path: loginScreenshot, fullPage: true });
-    await sendToTelegram(loginScreenshot, "✅ SAP BTP 登录成功页面");
+    console.log("✅ SAP BTP 登录成功页面");
+    //await sendToTelegram(loginScreenshot, "✅ SAP BTP 登录成功页面");
 
     // Step 4: 点击 “转到您的试用账户”
     console.log("👉 检测并关闭 Consent Banner...");
@@ -85,7 +86,8 @@ async function sendToTelegram(filePath, caption) {
     // Step 5: 截图试用账户页面
     const trialScreenshot = "trial-account.png";
     await page.screenshot({ path: trialScreenshot, fullPage: true });
-    await sendToTelegram(trialScreenshot, "✅ 已进入 SAP BTP 试用账户页面");
+    console.log("✅ 已进入 SAP BTP 试用账户页面");
+    //await sendToTelegram(trialScreenshot, "✅ 已进入 SAP BTP 试用账户页面");
 
     console.log("🎉 两张截图已发送到 Telegram");
 
@@ -96,8 +98,8 @@ async function sendToTelegram(filePath, caption) {
         const page = (await browser.pages())[0];
         const errorPath = "error.png";
         await page.screenshot({ path: errorPath, fullPage: true });
-        await sendToTelegram(errorPath, "❌ SAP BTP 操作失败截图");
-        console.log("🚨 失败截图已发送到 Telegram");
+        //await sendToTelegram(errorPath, "❌ SAP BTP 操作失败截图");
+        //console.log("🚨 失败截图已发送到 Telegram");
       } catch {}
     }
     process.exit(1);
