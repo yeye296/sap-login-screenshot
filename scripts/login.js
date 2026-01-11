@@ -89,7 +89,7 @@ async function sendToTelegram(filePath, caption) {
     console.log("✅ 已进入 SAP BTP 试用账户页面");
     //await sendToTelegram(trialScreenshot, "✅ 已进入 SAP BTP 试用账户页面");
 
-    console.log("🎉 两张截图已发送到 Telegram");
+    //console.log("🎉 两张截图已发送到 Telegram");
 
   } catch (err) {
     console.error("❌ 登录或进入试用账户失败:", err);
